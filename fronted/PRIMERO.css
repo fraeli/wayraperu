@@ -33,9 +33,8 @@ body {
 }
 
 .slider {
-  display: flex;
+  display: block;
   transition: transform 0.5s ease-in-out;
-  width: 100%;
 }
 
 .slide {
