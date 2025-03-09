@@ -35,6 +35,7 @@ body {
 .slider {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
 
 .slide {
@@ -47,6 +48,8 @@ body {
 }
 
 .slide.active {
+  min-width: 100%;
+  object-fit: cover;
   opacity: 1; /* Hacer visible la diapositiva activa */
 }
 
@@ -54,7 +57,7 @@ body {
   width: 100%;
   heigth: 100%
   object-fit: cover; /* Mantiene la relación de aspecto y ajusta la imagen */
-  position: relative;
+  display: block;
   display: block;
 }
 
