@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Crear indicadores dinámicamente
     slides.forEach((_, index) => {
-        const indicator = document.createElement("span");
+        const indicator = document.createElement("div");
         indicator.classList.add("indicator");
         if (index === 0) indicator.classList.add("active");
         indicator.addEventListener("click", () => goToSlide(index));
@@ -32,10 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const indicators = document.querySelectorAll(".indicator");
 
     function updateSlider() {
-        // Ocultar todas las diapositivas
-        slides.forEach(slide => slide.style.display = "none");
+        // Ocultar todas las diapositivas (configurarlas como invisibles)
+        slides.forEach(slide => {
+            slide.classList.remove("active");
+        });
+
         // Mostrar solo la diapositiva actual
-        slides[currentIndex].style.display = "block";
+        slides[currentIndex].classList.add("active");
 
         // Actualizar los indicadores
         indicators.forEach((indicator, index) => {
