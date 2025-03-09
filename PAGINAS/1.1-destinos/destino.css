@@ -1,0 +1,204 @@
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Altura adaptable a la pantalla */
+    background-image: url('../../IMAGENES/Destinos-Lima/portada.jpg'); /* Reemplaza con tu imagen */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end; /* Alinea el texto en la parte inferior */
+    justify-content: flex-start; /* Alinea el texto a la izquierda */
+    margin-bottom: 40px; /* Espacio antes de la siguiente sección */
+  }
+  
+  .hero-text {
+    position: relative;
+    color: #fff; /* Texto blanco */
+    background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: clamp(1.5rem, 4vw, 3rem); /* Tamaño del texto adaptable */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    max-width: 90%; /* Evita que el texto sea demasiado ancho */
+    margin: 0 0 5% 5%; /* Posición: abajo a la izquierda */
+    text-align: left;
+    border: 2px solid #d4af37; /* Borde dorado */
+  }
+  
+  /* Efecto hover para el texto */
+  .hero-text:hover {
+    background: rgba(0, 0, 0, 0.8); /* Fondo más oscuro al pasar el ratón */
+    transform: scale(1.02); /* Ligero aumento de tamaño */
+    transition: all 0.3s ease;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .hero-image {
+      height: 60vh; /* Altura reducida para tablets */
+    }
+  
+    .hero-text {
+      padding: 15px 20px;
+      font-size: clamp(1.2rem, 3vw, 2rem); /* Tamaño de texto más pequeño */
+      margin: 0 0 10% 5%; /* Ajuste de posición */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-image {
+      height: 50vh; /* Altura reducida para móviles */
+    }
+  
+    .hero-text {
+      padding: 10px 15px;
+      font-size: clamp(1rem, 2.5vw, 1.5rem); /* Tamaño de texto más pequeño */
+      margin: 0 0 15% 5%; /* Ajuste de posición */
+    }
+  }
+
+
+.section1 {
+    color:azure;
+}
+.titulo-seccion {
+    color: #ffd700; /* Dorado para títulos */
+    margin-bottom: 1.5rem;
+    
+    border-bottom: 2px solid #ffd700; /* Línea dorada */
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.descripcion-seccion {
+    color: #e0e0e0; /* Gris claro para descripciones */
+    margin-bottom: 2rem;
+   
+    line-height: 1.6;
+}
+
+/* Estilos para las regiones y destinos */
+.region {
+    margin-bottom: 2rem;
+}
+
+.region-titulo {
+    color: #ffd700; /* Dorado para títulos de región */
+    margin-bottom: 1rem;
+   
+    font-weight: 600;
+}
+
+.destino {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #2f2f2f; /* Fondo gris oscuro */
+    border-radius: 8px;
+    border: 1px solid #444; /* Borde gris */
+    transition: box-shadow 0.3s ease;
+}
+
+.destino:hover {
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2); /* Sombra dorada al hacer hover */
+}
+
+.destino-nombre {
+    color: #ffd700; /* Dorado para nombres de destino */
+    margin-bottom: 0.5rem;
+  
+    font-weight: 600;
+}
+
+.destino-descripcion {
+    color: #e0e0e0; /* Gris claro para descripciones */
+    margin-bottom: 1rem;
+
+    line-height: 1.5;
+}
+
+.destino-enlace {
+    padding: 0.5rem 1rem;
+    border: 2px solid #ff6961;
+    background-color: transparent;
+    border-radius: 4px;
+    font-weight: 600;
+    color: #ff6961; /* Rojo pastel para enlaces */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.destino-enlace:hover {
+    color: #1c1c1c; /* Rojo pastel más oscuro al hacer hover */
+    background-color: #ff6961;
+    transform: translateY(-2px);
+    border-color: #ff6961;
+    box-shadow: rgba(255, 185, 97, 0.2);
+
+    
+}
+
+/* Estilos para listas (basado en el diseño guardado) */
+.destinos-lista,
+.consejos-lista {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+.destinos-lista li,
+.consejos-lista li {
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+    background-color: #2f2f2f; /* Fondo gris oscuro */
+    border-radius: 8px;
+    border: 1px solid #444; /* Borde gris */
+    transition: box-shadow 0.3s ease;
+}
+
+.destinos-lista li:hover,
+.consejos-lista li:hover {
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2); /* Sombra dorada al hacer hover */
+}
+
+.destinos-lista li strong,
+.consejos-lista li strong {
+    color: #ff6961; /* Rojo pastel para resaltar */
+    font-weight: 600;
+}
+
+/* Estilos para imágenes */
+.destino-imagen {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ffd700; /* Borde dorado para imágenes */
+}
+    /* Imagen Interactiva */
+    .map-interactive img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 8px;
+        filter: sepia(50%) saturate(130%) brightness(90%);
+        transition: filter 0.3s ease;
+      }
+      
+      .map-interactive img:hover {
+        filter: sepia(0%) saturate(100%) brightness(100%);
+      }
+      
+      @media (max-width: 768px) {
+        .map-interactive img {
+          max-height: 300px;
+        }
+      }
+      @media (max-width: 480px) {
+        .map-interactive img {
+          max-height: 250px;
+        }
+      }

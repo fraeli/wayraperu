@@ -1,0 +1,183 @@
+/* Estilos generales */
+:root {
+  --color-fondo: #1c1c1c; /* Fondo oscuro */
+  --color-dorado: #d4af37; /* Color dorado */
+  --color-gris-claro: #f1f1f1; /* Gris claro para textos secundarios */
+  --color-blanco: #fff; /* Blanco para textos */
+  --color-negro: #000; /* Negro para detalles */
+  --color-gris-oscuro: #333; /* Gris oscuro para subtítulos y elementos secundarios */
+}
+/* Estilos para el hero section */
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: 75vh; /* Altura adaptable a la pantalla */
+  background-image: url('../../IMAGENES/Calendario/Calendario.jpg'); /* Reemplaza con tu imagen */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end; /* Alinea el texto en la parte inferior */
+  justify-content: flex-start; /* Alinea el texto a la izquierda */
+  margin-bottom: 40px; /* Espacio antes de la siguiente sección */
+}
+
+.hero-text {
+  position: relative;
+  color: #fff; /* Texto blanco */
+  background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: clamp(1.5rem, 4vw, 3rem); /* Tamaño del texto adaptable */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+  max-width: 90%; /* Evita que el texto sea demasiado ancho */
+  margin: 0 0 5% 5%; /* Posición: abajo a la izquierda */
+  text-align: left;
+  border: 2px solid #d4af37; /* Borde dorado */
+}
+
+/* Efecto hover para el texto */
+.hero-text:hover {
+  background: rgba(0, 0, 0, 0.8); /* Fondo más oscuro al pasar el ratón */
+  transform: scale(1.02); /* Ligero aumento de tamaño */
+  transition: all 0.3s ease;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .hero-image {
+    height: 60vh; /* Altura reducida para tablets */
+  }
+
+  .hero-text {
+    padding: 15px 20px;
+    font-size: clamp(1.2rem, 3vw, 2rem); /* Tamaño de texto más pequeño */
+    margin: 0 0 10% 5%; /* Ajuste de posición */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image {
+    height: 50vh; /* Altura reducida para móviles */
+  }
+
+  .hero-text {
+    padding: 10px 15px;
+    font-size: clamp(1rem, 2.5vw, 1.5rem); /* Tamaño de texto más pequeño */
+    margin: 0 0 15% 5%; /* Ajuste de posición */
+  }
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-blanco);
+  margin: 0;
+  padding: 0;
+}
+
+.main1 {
+  padding: 80px 20px;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Estilos para las secciones */
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-dorado);
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Estilos para las tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-gris-oscuro);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+th {
+  background-color: var(--color-negro);
+  color: var(--color-dorado);
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid var(--color-dorado);
+}
+
+td {
+  background-color: var(--color-fondo);
+  color: var(--color-gris-claro);
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-dorado);
+}
+
+tr:nth-child(even) td {
+  background-color: var(--color-gris-oscuro);
+}
+
+tr:hover {
+  background-color: var(--color-negro);
+  cursor: pointer;
+}
+
+td:first-child {
+  font-weight: bold;
+  color: var(--color-dorado);
+}
+
+/* Enlaces */
+a {
+  color: var(--color-dorado);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c8a01a;
+  text-decoration: underline;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}

@@ -1,0 +1,277 @@
+/* General styles */
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: 75vh; /* Altura adaptable a la pantalla */
+  background-image: url('../../IMAGENES/HistoriaPeru/Portada.jpg'); /* Reemplaza con tu imagen */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end; /* Alinea el texto en la parte inferior */
+  justify-content: flex-start; /* Alinea el texto a la izquierda */
+  margin-bottom: 40px; /* Espacio antes de la siguiente sección */
+}
+
+.hero-text {
+  position: relative;
+  color: #fff; /* Texto blanco */
+  background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: clamp(1.5rem, 4vw, 3rem); /* Tamaño del texto adaptable */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+  max-width: 90%; /* Evita que el texto sea demasiado ancho */
+  margin: 0 0 5% 5%; /* Posición: abajo a la izquierda */
+  text-align: left;
+  border: 2px solid #d4af37; /* Borde dorado */
+}
+
+/* Efecto hover para el texto */
+.hero-text:hover {
+  background: rgba(0, 0, 0, 0.8); /* Fondo más oscuro al pasar el ratón */
+  transform: scale(1.02); /* Ligero aumento de tamaño */
+  transition: all 0.3s ease;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .hero-image {
+    height: 60vh; /* Altura reducida para tablets */
+  }
+
+  .hero-text {
+    padding: 15px 20px;
+    font-size: clamp(1.2rem, 3vw, 2rem); /* Tamaño de texto más pequeño */
+    margin: 0 0 10% 5%; /* Ajuste de posición */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image {
+    height: 50vh; /* Altura reducida para móviles */
+  }
+
+  .hero-text {
+    padding: 10px 15px;
+    font-size: clamp(1rem, 2.5vw, 1.5rem); /* Tamaño de texto más pequeño */
+    margin: 0 0 15% 5%; /* Ajuste de posición */
+  }
+}
+
+
+/* Navegación */
+.divI {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.divI ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.divI .A1 {
+  text-decoration: none;
+  color: #d4af37;
+  font-weight: bold;
+  font-size: clamp(0.9rem, 0.5vw, 1.9rem);
+  padding: 10px;
+}
+
+.divI .A1:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Secciones */
+section {
+  margin-bottom: 40px;
+  background-color: #262626;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+  color: #d4af37;
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+section p {
+  font-size: 16px;
+  color: #e0e0e0;
+  margin-bottom: 15px;
+}
+
+/* Imagen Interactiva */
+.map-interactive img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  filter: sepia(50%) saturate(130%) brightness(90%);
+  transition: filter 0.3s ease;
+}
+
+.map-interactive img:hover {
+  filter: sepia(0%) saturate(100%) brightness(100%);
+}
+
+.map-interactive p {
+  font-size: 14px;
+  color: #d4af37;
+  margin-top: 10px;
+}
+
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .divI ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .divI .A1 {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
+
+  section p {
+    font-size: 14px;
+  }
+
+  .map-interactive img {
+    max-height: 300px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 10px;
+  }
+
+  section h2 {
+    font-size: 18px;
+  }
+
+  section p {
+    font-size: 13px;
+  }
+
+  .map-interactive img {
+    max-height: 250px;
+  }
+
+}
+/* Historia Perú - Línea de Tiempo */
+.historia-peru {
+  background-color: #262626;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+}
+
+.cronograma h3 {
+  color: #d4af37;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.linea-tiempo {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linea-tiempo li {
+  background-color: #333;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.linea-tiempo li:hover {
+  background-color: #444;
+  transform: translateY(-5px);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fecha {
+  font-weight: bold;
+  color: #d4af37;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.linea-tiempo p {
+  font-size: 16px;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .historia-peru {
+    padding: 15px;
+  }
+
+  .cronograma h3 {
+    font-size: 20px;
+  }
+
+  .linea-tiempo li {
+    padding: 12px;
+  }
+
+  .fecha {
+    font-size: 16px;
+  }
+
+  .linea-tiempo p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .historia-peru {
+    padding: 10px;
+  }
+
+  .cronograma h3 {
+    font-size: 18px;
+  }
+
+  .linea-tiempo li {
+    padding: 10px;
+  }
+
+  .fecha {
+    font-size: 14px;
+  }
+
+  .linea-tiempo p {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Montserrat";
+    color: rgba(234, 190, 63);
+    background-color: #1c1c1c;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el hero section */
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Altura adaptable a la pantalla */
+    background-image: url('../../IMAGENES/logo-blanco.jpg'); /* Reemplaza con tu imagen */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end; /* Alinea el texto en la parte inferior */
+    justify-content: flex-start; /* Alinea el texto a la izquierda */
+    margin-bottom: 40px; /* Espacio antes de la siguiente sección */
+  }
+  
+  .hero-text {
+    position: relative;
+    color: #fff; /* Texto blanco */
+    background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: clamp(1.5rem, 4vw, 3rem); /* Tamaño del texto adaptable */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    max-width: 90%; /* Evita que el texto sea demasiado ancho */
+    margin: 0 0 5% 5%; /* Posición: abajo a la izquierda */
+    text-align: left;
+    border: 2px solid #d4af37; /* Borde dorado */
+  }
+  
+  /* Efecto hover para el texto */
+  .hero-text:hover {
+    background: rgba(0, 0, 0, 0.8); /* Fondo más oscuro al pasar el ratón */
+    transform: scale(1.02); /* Ligero aumento de tamaño */
+    transition: all 0.3s ease;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .hero-image {
+      height: 60vh; /* Altura reducida para tablets */
+    }
+  
+    .hero-text {
+      padding: 15px 20px;
+      font-size: clamp(1.2rem, 3vw, 2rem); /* Tamaño de texto más pequeño */
+      margin: 0 0 10% 5%; /* Ajuste de posición */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-image {
+      height: 50vh; /* Altura reducida para móviles */
+    }
+  
+    .hero-text {
+      padding: 10px 15px;
+      font-size: clamp(1rem, 2.5vw, 1.5rem); /* Tamaño de texto más pequeño */
+      margin: 0 0 15% 5%; /* Ajuste de posición */
+    }
+  }
+  
+
+  main {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      text-align: center;
+  }
+  .section1 {
+      background-color: #333;
+      margin-bottom: 20px;
+      padding: 20px;
+  }
+  h2 {
+      font-size: clamp(1.7rem, 1.9vw, 2.1rem);
+      font-weight: 700;
+      text-transform: uppercase;
+  }
+  h3 {
+      font-size: clamp(1.5rem, 1.7vw, 1.9rem);
+      font-weight: 600;
+  }
+  p {
+      font-size: clamp(1.3rem, 1.5vw, 1.7rem);
+      font-weight: 500;
+      color: azure;
+  }
+  h4 {
+      font-size: clamp(1.3rem, 1.5vw, 1.7rem);
+      font-weight: 500;
+  }
