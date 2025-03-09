@@ -126,9 +126,9 @@
 }
 
 @media (max-width: 480px) {
-    .galeria {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
+  .galeria {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      
+  }
 
-   
 }
