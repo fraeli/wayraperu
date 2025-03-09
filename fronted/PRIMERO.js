@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const indicators = document.querySelectorAll(".indicator");
 
     function updateSlider() {
-        console.log("Current index: ", currentIndex); // Verifica que el índice se actualice correctamente
         // Ocultar todas las diapositivas
         slides.forEach(slide => slide.style.display = "none");
         // Mostrar solo la diapositiva actual
@@ -62,4 +61,3 @@ document.addEventListener("DOMContentLoaded", () => {
     // Inicializar el slider mostrando solo la primera imagen
     updateSlider();
 });
-
