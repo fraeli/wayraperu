@@ -103,6 +103,56 @@
 
 
 
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(165, 133, 37, 0.5);
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-list li {
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .dropdown-menu {
+    position: static;
+    display: none;
+    box-shadow: none;
+    z-index: 15;
+  }
+
+  .dropdown-menu.visible {
+    display: block;
+  }
+
+  .nav-toggle {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+  }
+}
+
+
+
+
   footer {
     background-color: #000; /* Fondo negro elegante */
     color: #fff;
