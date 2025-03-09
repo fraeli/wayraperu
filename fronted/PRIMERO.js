@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const indicatorsContainer = document.querySelector(".indicators");
 
     let currentIndex = 0;
-    let autoSlideInterval = setInterval(nextSlide, 5000); // Intervalo de auto-slide
+    let autoSlideInterval = setInterval(nextSlide, 5000); // Solo definirlo una vez
 
-    // Detener el auto-slide al hacer clic en los botones
+    // Detener auto-slide al hacer clic
     prevBtn.addEventListener("click", () => {
         clearInterval(autoSlideInterval); // Detener el auto-slide
         prevSlide();
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         autoSlideInterval = setInterval(nextSlide, 5000); // Reiniciar el auto-slide
     });
 
-    // Crear los indicadores dinámicamente
+    // Crear indicadores dinámicamente
     slides.forEach((_, index) => {
         const indicator = document.createElement("span");
         indicator.classList.add("indicator");
@@ -32,13 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const indicators = document.querySelectorAll(".indicator");
 
     function updateSlider() {
+        console.log("Current index: ", currentIndex); // Verifica que el índice se actualice correctamente
         // Ocultar todas las diapositivas
-        slides.forEach(slide => {
-            slide.style.opacity = "0"; // Hacer todas las imágenes invisibles
-            slide.style.transition = "opacity 1s ease-in-out"; // Transición suave
-        });
+        slides.forEach(slide => slide.style.display = "none");
         // Mostrar solo la diapositiva actual
-        slides[currentIndex].style.opacity = "1"; // Hacer visible la imagen actual
+        slides[currentIndex].style.display = "block";
 
         // Actualizar los indicadores
         indicators.forEach((indicator, index) => {
@@ -64,3 +62,4 @@ document.addEventListener("DOMContentLoaded", () => {
     // Inicializar el slider mostrando solo la primera imagen
     updateSlider();
 });
+
