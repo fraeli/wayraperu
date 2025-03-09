@@ -5,6 +5,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const indicatorsContainer = document.querySelector(".indicators");
 
     let currentIndex = 0;
+    let autoSlideInterval = setInterval(nextSlide, 5000); // Solo definirlo una vez
+
+    // Detener auto-slide al hacer clic
+    prevBtn.addEventListener("click", () => {
+        clearInterval(autoSlideInterval); // Detener el auto-slide
+        prevSlide();
+        autoSlideInterval = setInterval(nextSlide, 5000); // Reiniciar el auto-slide
+    });
+
+    nextBtn.addEventListener("click", () => {
+        clearInterval(autoSlideInterval); // Detener el auto-slide
+        nextSlide();
+        autoSlideInterval = setInterval(nextSlide, 5000); // Reiniciar el auto-slide
+    });
 
     // Crear indicadores dinámicamente
     slides.forEach((_, index) => {
@@ -44,12 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updateSlider();
     }
 
-    prevBtn.addEventListener("click", prevSlide);
-    nextBtn.addEventListener("click", nextSlide);
-
     // Inicializar el slider mostrando solo la primera imagen
     updateSlider();
-
-    // Auto-slide cada 5 segundos
-    setInterval(nextSlide, 5000);
 });
+
