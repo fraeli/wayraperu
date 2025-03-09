@@ -35,6 +35,7 @@ body {
 .slider {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
 
 .slide {
@@ -49,7 +50,8 @@ body {
 
 .slide img {
   width: 100%;
-  display: block;
+  heigth: 100%
+  display: flex;
 }
 
 /* Controles del slider */
