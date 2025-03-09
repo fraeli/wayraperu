@@ -28,6 +28,7 @@ body {
   position: relative;
   width: 100%;
   max-width: 2000px;
+  heigth: 100%;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -58,7 +59,7 @@ body {
   heigth: 100%
   object-fit: cover; /* Mantiene la relación de aspecto y ajusta la imagen */
   display: block;
-  display: block;
+  object-fit: cover;
 }
 
 /* Controles del slider */
