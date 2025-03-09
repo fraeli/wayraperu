@@ -40,13 +40,11 @@ body {
 .slide {
   min-width: 100%;
   opacity: 0;
-  visibility: hidden;
   transition: opacity 0.5s ease-in-out;
 }
 
 .slide.active {
-  opacity: 1;
-  visibility: visible; /* Hacer visible la diapositiva activa */
+  opacity: 1; /* Hacer visible la diapositiva activa */
 }
 
 .slide img {
