@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+ 
 .hero-image {
     position: relative;
     width: 100%;
@@ -63,6 +67,7 @@
 
 .section1 {
     color:azure;
+    scroll-margin-top: 80px; /* Ajusta este valor según la altura de tu menú */
 }
 .titulo-seccion {
     color: #ffd700; /* Dorado para títulos */
