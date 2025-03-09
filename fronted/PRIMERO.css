@@ -12,12 +12,6 @@
     height: 100vh;
   }
 
-  :root {
-    --primary-color1: #000000;
-    --secondary-color1: #ffffff;
-    --button-color1: rgba(0, 0, 0, 0.5);
-    --button-hover-color1: rgba(0, 0, 0, 0.8);
-  }
   
   .slider-container {
 
@@ -38,11 +32,12 @@
     transition: opacity 0.5s ease-in-out;
   }
   
-  .slide img {
-    width: 100%;
-    display: block;
+ .slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+ }
 
-  }
   
   .controls {
     position: absolute;
@@ -55,15 +50,17 @@
   }
   
   .controls button {
-    background: var(--button-color1);
-    border: none;
-    color: var(--secondary-color1);
-    padding: 1em;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: background 0.3s;
-  }
+  background: var(--button-color1);
+  border: none;
+  color: var(--secondary-color1);
+  padding: 1em;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;  /* Ajusta según lo que prefieras */
+  transition: background 0.3s;
+  border: 2px solid var(--button-hover-color1); /* Añadido para mayor visibilidad */
+}
+
   
   .controls button:hover {
     background: var(--button-hover-color1);
@@ -108,12 +105,17 @@
   }
   
 
-  :root {
-    --primary-color: #000000;
-    --secondary-color: #b58e50;
-    --text-color: #ffffff;
-    --background-color: #f9f9f9;
-  }
+:root {
+  --primary-color1: #000000;
+  --secondary-color1: #ffffff;
+  --button-color1: rgba(0, 0, 0, 0.5);
+  --button-hover-color1: rgba(0, 0, 0, 0.8);
+  --primary-color: #000000;
+  --secondary-color: #b58e50;
+  --text-color: #ffffff;
+  --background-color: #f9f9f9;
+}
+
   
  
   .slogan-container {
@@ -162,4 +164,9 @@
       font-size: 1.4rem;
     }
   }
-  
+  @media (max-width: 768px) {
+  .slide img {
+    width: 100%; /* Ajusta el tamaño de la imagen */
+  }
+}
+
