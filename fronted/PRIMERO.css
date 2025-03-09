@@ -40,7 +40,7 @@ body {
 }
 
 .slide {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
@@ -49,6 +49,7 @@ body {
 }
 
 .slide.active {
+  min-width: 100%;
   object-fit: cover;
   opacity: 1; /* Hacer visible la diapositiva activa */
 }
