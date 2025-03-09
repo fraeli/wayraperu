@@ -36,13 +36,17 @@ body {
 .slider {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  position: relative;
 }
 
 .slide {
   min-width: 100%;
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  visibility: hidden; /* Se mantiene solo para el control de visibilidad */
+  position: absolute; /* Las imágenes estarán apiladas */
+  left: 0;
+  top: 0;
 }
 
 .slide.active {
@@ -146,6 +150,7 @@ body {
   .slide img {
     width: 100%;
     max-height: 400px; /* Controlar la altura de las imágenes */
+    object-fit: cover; /* Para que las imágenes cubran el espacio de manera más ajustada */
   }
 }
 
@@ -166,5 +171,6 @@ body {
   .slide img {
     width: 100%;
     max-height: 300px; /* Ajuste para pantallas más pequeñas */
+    object-fit: cover; /* Mantiene la proporción sin distorsión */
   }
 }
