@@ -17,7 +17,6 @@ body {
   --secondary-color1: #ffffff;
   --button-color1: rgba(0, 0, 0, 0.5);
   --button-hover-color1: rgba(0, 0, 0, 0.8);
-
   --primary-color: #000000;
   --secondary-color: #b58e50;
   --text-color: #ffffff;
@@ -36,27 +35,22 @@ body {
 .slider {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  position: relative;
 }
 
 .slide {
   min-width: 100%;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
-  visibility: hidden; /* Se mantiene solo para el control de visibilidad */
-  position: absolute; /* Las imágenes estarán apiladas */
-  left: 0;
-  top: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .slide.active {
   opacity: 1;
-  visibility: visible;
+  visibility: visible; /* Hacer visible la diapositiva activa */
 }
 
 .slide img {
   width: 100%;
-  height: auto; /* Mantiene la proporción de la imagen */
   display: block;
 }
 
@@ -78,9 +72,8 @@ body {
   padding: 1em;
   font-size: 1.5rem;
   cursor: pointer;
-  border-radius: 50%; /* Más redondeado */
+  border-radius: 50%;
   transition: background 0.3s;
-  border: 2px solid var(--button-hover-color1); /* Borde añadido */
 }
 
 .controls button:hover {
@@ -111,6 +104,21 @@ body {
   background: var(--secondary-color1);
 }
 
+/* Responsividad */
+@media (max-width: 768px) {
+  .controls button {
+    padding: 0.8em;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .controls button {
+    padding: 0.5em;
+    font-size: 1rem;
+  }
+}
+
 /* Estilos para el eslogan */
 .slogan-container {
   text-align: center;
@@ -132,45 +140,27 @@ body {
   font-weight: 700;
 }
 
-/* Estilos responsivos */
+/* Responsividad */
 @media (max-width: 768px) {
-  .controls button {
-    padding: 0.8em;
-    font-size: 1.2rem;
-  }
-
   .slogan-container {
     padding: 1.5em 2em;
   }
-
+  .slogan {
+    font-size: 1rem;
+  }
   .sub-slogan {
     font-size: 2.5rem;
-  }
-
-  .slide img {
-    width: 100%;
-    max-height: 400px; /* Controlar la altura de las imágenes */
-    object-fit: cover; /* Para que las imágenes cubran el espacio de manera más ajustada */
   }
 }
 
 @media (max-width: 480px) {
-  .controls button {
-    padding: 0.5em;
-    font-size: 1rem;
-  }
-
   .slogan-container {
     padding: 1em 1.5em;
   }
-
+  .slogan {
+    font-size: 0.7rem;
+  }
   .sub-slogan {
     font-size: 1.4rem;
-  }
-
-  .slide img {
-    width: 100%;
-    max-height: 300px; /* Ajuste para pantallas más pequeñas */
-    object-fit: cover; /* Mantiene la proporción sin distorsión */
   }
 }
