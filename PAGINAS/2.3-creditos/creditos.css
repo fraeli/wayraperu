@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  .creditos {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .creditos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .creditos li {
+    margin-bottom: 20px;
+  }
+  
+  .creditos img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  
+  .creditos h2 {
+    font-size: 18px;
+    margin-top: 0;
+  }
+  .creditos h4 {
+    font-size: 18px;
+    margin-top: 0;
+  }
+  .creditos a {
+    text-decoration: none;
+    color: #337ab7;
+  }
+  
+  .creditos a:hover {
+    color: #23527c;
+  }

@@ -1,0 +1,184 @@
+   
+    .hero-image {
+      position: relative;
+      width: 100%;
+      height: 75vh; /* Altura adaptable a la pantalla */
+      background-image: url('../../IMAGENES/InfRelevante/portada.jpg'); /* Reemplaza con tu imagen */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end; /* Alinea el texto en la parte inferior */
+      justify-content: flex-start; /* Alinea el texto a la izquierda */
+      margin-bottom: 40px; /* Espacio antes de la siguiente sección */
+    }
+    
+    .hero-text {
+      position: relative;
+      color: #fff; /* Texto blanco */
+      background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+      padding: 20px 30px;
+      border-radius: 10px;
+      font-size: clamp(1.5rem, 4vw, 3rem); /* Tamaño del texto adaptable */
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+      max-width: 90%; /* Evita que el texto sea demasiado ancho */
+      margin: 0 0 5% 5%; /* Posición: abajo a la izquierda */
+      text-align: left;
+      border: 2px solid #d4af37; /* Borde dorado */
+    }
+    
+    /* Efecto hover para el texto */
+    .hero-text:hover {
+      background: rgba(0, 0, 0, 0.8); /* Fondo más oscuro al pasar el ratón */
+      transform: scale(1.02); /* Ligero aumento de tamaño */
+      transition: all 0.3s ease;
+    }
+    
+    /* Estilos responsivos */
+    @media (max-width: 768px) {
+      .hero-image {
+        height: 60vh; /* Altura reducida para tablets */
+      }
+    
+      .hero-text {
+        padding: 15px 20px;
+        font-size: clamp(1.2rem, 3vw, 2rem); /* Tamaño de texto más pequeño */
+        margin: 0 0 10% 5%; /* Ajuste de posición */
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-image {
+        height: 50vh; /* Altura reducida para móviles */
+      }
+    
+      .hero-text {
+        padding: 10px 15px;
+        font-size: clamp(1rem, 2.5vw, 1.5rem); /* Tamaño de texto más pequeño */
+        margin: 0 0 15% 5%; /* Ajuste de posición */
+      }
+    }
+
+  
+  
+  .section1 {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px;
+      background: linear-gradient(90deg, #0b0b0b, #363636); /* Matices de negro */
+      gap: 20px;
+      flex-wrap: wrap; /* Permite adaptarse en pantallas pequeñas */
+  }
+    
+  .div1 {
+    text-align: center;
+    flex: 1 1 calc(33.33% - 40px); /* Tres elementos por fila, con espacio */
+    max-width: 300px; /* Tamaño máximo por contenedor */
+  }
+  
+  .div1 img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Suaviza el efecto hover */
+  }
+  
+  .div1 img:hover {
+    transform: scale(1.1); /* Ampliación al pasar el cursor */
+  }
+  
+  .span1 {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .div1 {
+      flex: 1 1 calc(50% - 20px); /* Dos elementos por fila en tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .div1 {
+      flex: 1 1 100%; /* Un elemento por fila en móviles */
+    }
+  
+    .div1 img {
+      max-width: 100px; /* Imagen más pequeña en móviles */
+    }
+  }
+
+  .main1 {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+  .section2 {
+    background-color: #333;
+    margin-bottom: 40px;
+    padding: 20px;
+  }
+  
+  
+  span {
+    font-size: clamp(1.1rem, 1.3vw, 1.5rem);
+    font-weight: 500;
+    color: azure;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  
+  
+  .div2 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+  }
+  
+  .div2 span {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #ddd; /* Texto claro */
+  }
+  .ul1 {
+    padding: 20px;
+    margin: 0;
+    list-style-type: none; /* Elimina el estilo de lista por defecto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+
+  .li1 {
+      font-size: clamp(1.1rem, 1.3vw, 1.5rem);
+      line-height: 2;
+      padding-left: 15px;
+      position: relative;
+      font-weight: 500;
+      color: azure;
+  }
+
+  .li1:before {
+      content: "•"; /* Utiliza el punto como viñeta */
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 24px; /* Tamaño grande de la viñeta */
+      color: #000; /* Color de la viñeta */
+  }
+
+  .li1:not(:last-child) {
+      border-bottom: 1px solid #e0e0e0; /* Línea de separación entre ítems */
+  }
